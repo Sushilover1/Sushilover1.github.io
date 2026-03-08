@@ -55,6 +55,34 @@
                 <!-- Interactive content will be added here -->
             </div>
         </section>
+
+        <section>
+            <h2>Interactive Tile Drawing</h2>
+            <p>Click the button below to draw a random Mahjong tile:</p>
+            <button onclick="drawTile()">Draw Tile</button>
+            <p id="drawn-tile" style="font-weight: bold; margin-top: 1rem;"></p>
+        </section>
+
+        <section>
+            <h2>Tile Matching Game</h2>
+            <p>Match tiles to form a "Pung" (three identical tiles):</p>
+            <div id="tile-matching-game" style="display: flex; gap: 1rem; margin-top: 1rem;">
+                <button onclick="selectTile('Tile 1')">Tile 1</button>
+                <button onclick="selectTile('Tile 2')">Tile 2</button>
+                <button onclick="selectTile('Tile 3')">Tile 3</button>
+            </div>
+            <p id="matching-result" style="font-weight: bold; margin-top: 1rem;"></p>
+        </section>
+
+        <section>
+            <h2>Winning Hand Example</h2>
+            <p>Follow the steps below to form a winning hand:</p>
+            <ol>
+                <li>Step 1: Draw a tile. <button onclick="drawWinningTile()">Draw</button></li>
+                <li>Step 2: Check your hand. <span id="winning-hand" style="font-weight: bold;"></span></li>
+            </ol>
+        </section>
+
         <section>
             <h2>Images</h2>
             <div class="images">
@@ -80,6 +108,33 @@
                 </svg>
             </div>
         </section>
+
+        <script>
+            // Interactive Tile Drawing
+            function drawTile() {
+                const tiles = ['One of Bamboo', 'Red Dragon', 'Five of Circles', 'Green Dragon', 'White Dragon'];
+                const randomTile = tiles[Math.floor(Math.random() * tiles.length)];
+                document.getElementById('drawn-tile').innerText = `You drew: ${randomTile}`;
+            }
+
+            // Tile Matching Game
+            let selectedTiles = [];
+            function selectTile(tile) {
+                selectedTiles.push(tile);
+                if (selectedTiles.length === 3) {
+                    const isPung = selectedTiles.every(t => t === selectedTiles[0]);
+                    document.getElementById('matching-result').innerText = isPung ? 'You formed a Pung!' : 'Not a Pung. Try again!';
+                    selectedTiles = []; // Reset the selection
+                }
+            }
+
+            // Winning Hand Example
+            function drawWinningTile() {
+                const hand = ['Pung of Bamboo', 'Chow of Circles', 'Pair of Dragons'];
+                const randomHand = hand[Math.floor(Math.random() * hand.length)];
+                document.getElementById('winning-hand').innerText = `Your hand: ${randomHand}`;
+            }
+        </script>
     </div>
 </body>
 </html>
