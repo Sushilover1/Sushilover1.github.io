@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Mahjong</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            padding: 2rem;
+        }
+        .images {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .images img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Mahjong</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Introduction</h2>
+            <p>Mahjong is a tile-based game that originated in China during the Qing dynasty. It is commonly played by four players and has become popular worldwide. The game involves skill, strategy, and a bit of luck.</p>
+        </section>
+        <section>
+            <h2>Basic Rules</h2>
+            <p>The goal of Mahjong is to build a winning hand by drawing and discarding tiles. A winning hand typically consists of four sets of three tiles and a pair. Sets can be a "Pung" (three identical tiles), a "Chow" (three consecutive tiles of the same suit), or a "Kong" (four identical tiles).</p>
+        </section>
+        <section>
+            <h2>Interactive Gameplay Example</h2>
+            <p>Below is an interactive example to help you learn the basics of Mahjong gameplay.</p>
+            <div id="gameplay-example">
+                <!-- Interactive content will be added here -->
+            </div>
+        </section>
+        <section>
+            <h2>Images</h2>
+            <div class="images">
+                <!-- Mahjong Tile: One of Bamboo -->
+                <svg width="100" height="150" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #000; border-radius: 5px;">
+                    <rect width="100" height="150" fill="white" />
+                    <line x1="50" y1="40" x2="50" y2="110" stroke="green" stroke-width="5" />
+                    <circle cx="50" cy="75" r="5" fill="green" />
+                </svg>
+                <!-- Mahjong Tile: Red Dragon -->
+                <svg width="100" height="150" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #000; border-radius: 5px;">
+                    <rect width="100" height="150" fill="white" />
+                    <text x="50" y="75" font-size="30" text-anchor="middle" fill="red">中</text>
+                </svg>
+                <!-- Mahjong Tile: Five of Circles -->
+                <svg width="100" height="150" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #000; border-radius: 5px;">
+                    <rect width="100" height="150" fill="white" />
+                    <circle cx="50" cy="50" r="10" fill="blue" />
+                    <circle cx="30" cy="75" r="10" fill="blue" />
+                    <circle cx="70" cy="75" r="10" fill="blue" />
+                    <circle cx="40" cy="100" r="10" fill="blue" />
+                    <circle cx="60" cy="100" r="10" fill="blue" />
+                </svg>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
